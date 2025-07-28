@@ -24,7 +24,13 @@ fn main() {
         let mut op = String::new();
        
         io::stdin().read_line(&mut op).expect("Failed to read line.");
+        let op = op.trim();
         
+        if ["+", "-", "*", "/", "**"].contains(&op) {
+            break op.to_string();
+        } else {
+            println!("Invalid operator. Try again.");
+        }
         
     };
 
